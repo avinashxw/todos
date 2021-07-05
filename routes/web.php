@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/todoitems_show','\App\Http\Controllers\TodoitemsController@show');
+Route::get('/todoitems_delete/{id}', '\App\Http\Controllers\TodoitemsController@destroy');

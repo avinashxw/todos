@@ -78,8 +78,11 @@ class TodoitemsController extends Controller
      * @param  \App\Models\todoitems  $todoitems
      * @return \Illuminate\Http\Response
      */
-    public function destroy(todoitems $todoitems)
+    public function destroy(todoitems $todoitems,$id)
     {
-        //
+        //echo '<pre>'; print_r($id);
+        Todoitems::destroy(array('id',$id));
+
+        return redirect('todoitems_show');
     }
 }

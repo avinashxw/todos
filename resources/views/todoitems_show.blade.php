@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
 
     <title>Hello, world!</title>
   </head>
@@ -30,7 +32,7 @@
                         <th scope="row">{{$todoitem->id}}</th>
                         <td>{{$todoitem->name}}</td>
                         <td>{{$todoitem->created_at}}</td>
-                        <td>@mdo</td>
+                        <td><a href="todoitems_delete/{{$todoitem->id}}" class="label label-default"><i class="fa fa-trash"></i></a></td>
                     </tr>
                 @endforeach                    
                 </tbody>
