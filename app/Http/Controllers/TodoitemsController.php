@@ -46,7 +46,7 @@ class TodoitemsController extends Controller
      */
     public function show(todoitems $todoitems)
     {
-        //
+        return view('todoitems_show')->with('arrTodoItems', Todoitems::all());
     }
 
     /**
