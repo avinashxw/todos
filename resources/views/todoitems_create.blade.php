@@ -16,31 +16,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Hey, this is ToDo Items List!</h1>
-                <h2>{{session('msg')}}</h2>
-                <a href="todoitems_create"><i class="fa fa-plus"></i> Add New</a>
+                <h1>Hey, create a new ToDo Item!</h1>
+                <a href="todoitems_show"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
             </div>
             <div class="col-md-12">
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Todo Items</th>
-                    <th scope="col">CreatedAt</th>
-                    <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach($arrTodoItems as $todoitem)
-                    <tr>
-                        <th scope="row">{{$todoitem->id}}</th>
-                        <td>{{$todoitem->name}}</td>
-                        <td>{{$todoitem->created_at}}</td>
-                        <td><a href="todoitems_delete/{{$todoitem->id}}" class="label label-default"><i class="fa fa-trash"></i></a></td>
-                    </tr>
-                @endforeach                    
-                </tbody>
-                </table>
+                <form action="todoitems_submit" method="POST">
+                    @csrf
+                    <label class="control-label">Please input Todo</label><br/><br/>
+                    <input type="text" class="form-control" name="name" required="true" id="item" /><br/>
+                    <input type="submit" class="btn btn-success" />
+                </form>
             </div>
         </div>
     </div>

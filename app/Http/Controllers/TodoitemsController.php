@@ -24,7 +24,7 @@ class TodoitemsController extends Controller
      */
     public function create()
     {
-        //
+        return view('todoitems_create');
     }
 
     /**
@@ -35,7 +35,13 @@ class TodoitemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $res = new Todoitems;
+
+        $res->name = $request->input('name');
+        $res->save();
+
+        $request->session()->flash('msg','Success! Todo created..');
+        return redirect('todoitems_show');
     }
 
     /**
