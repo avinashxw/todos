@@ -14,10 +14,10 @@ php artisan route:cache
 
 ## Screenshots
 
-<img src="./screenshots/screenshot-todo" title="Todoitems Show">
-<img src="./screenshots/screenshot-create" title="Todoitems Show">
-<img src="./screenshots/screenshot-create-success" title="Todoitems Show">
-<img src="./screenshots/screenshot-edit" title="Todoitems Show">
+<img src="./screenshots/screenshot-todo-show.png" title="Todoitems Show">
+<img src="./screenshots/screenshot-todo-create.png" title="Todoitems Show">
+<img src="./screenshots/screenshot-todo-create-success.png" title="Todoitems Show">
+<img src="./screenshots/screenshot-todo-edit.png" title="Todoitems Show">
 
 ### References
 YouTube Channel: Programming with Vishal
