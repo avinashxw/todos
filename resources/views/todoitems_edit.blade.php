@@ -20,7 +20,7 @@
                 <a href="todoitems_show"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
             </div>
             <div class="col-md-12">
-                <form action="{{route('todoitems.update',[$arrTodoItems->id])}}" method="post">
+                <form action="{{route('todoitems.update', [$arrTodoItems->id] )}}" method="post">
                     @csrf
                     @method('PUT')
                     <label class="control-label">Please input Todo</label><br/><br/>
