@@ -61,9 +61,9 @@ class TodoitemsController extends Controller
      * @param  \App\Models\todoitems  $todoitems
      * @return \Illuminate\Http\Response
      */
-    public function edit(todoitems $todoitems)
+    public function edit(todoitems $todoitems,$id)
     {
-        //
+        return view('todoitems_edit')->with('arrTodoItems', Todoitems::find($id));
     }
 
     /**
@@ -75,7 +75,13 @@ class TodoitemsController extends Controller
      */
     public function update(Request $request, todoitems $todoitems)
     {
-        //
+        $res = Todoitems::find($request->id);
+
+        $res->name = $request->input('name');
+        $res->save();
+
+        $request->session()->flash('msg','Success! Todo updated..');
+        return redirect('todoitems_show');
     }
 
     /**
